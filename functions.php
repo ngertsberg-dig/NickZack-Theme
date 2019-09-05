@@ -23,10 +23,16 @@ function wpdocs_theme_name_scripts() {
     }
 add_action( 'wp_enqueue_scripts', 'wpdocs_theme_name_scripts' );
 
+add_image_size('block','480','480',false);
+add_image_size('icon','100','100',false);
+add_image_size('big','800','400',true);
+if( function_exists('acf_add_options_page') ) {
+  acf_add_options_page();
+}
 
-
-  
-
+if( function_exists('acf_set_options_page_title') ) {
+  acf_set_options_page_title( __('Universal Fields') );
+}
 //   if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 //     wp_enqueue_script( 'comment-reply' );
 //   }

@@ -23,13 +23,46 @@ h4 {
   padding-left: 2em;
   color: red; }
 
-#menuButton {
+h1 {
+  font-size: 68px; }
+
+h2 {
+  font-size: 48px; }
+
+h3 {
+  font-size: 36px; }
+
+h4 {
+  font-size: 24px; }
+
+#header {
   position: fixed;
-  right: 0px;
-  border: 2px solid red;
-  height: auto; }
-  #menuButton:hover {
-    cursor: pointer; }
+  top: 0px;
+  left: 0px;
+  width: 100%; }
+  #header .top-header .wrapper, #header .bottom-header .wrapper {
+    width: 95%;
+    margin: 0 auto; }
+  #header .top-header {
+    background-color: #FFCA22;
+    padding: 20px 0px; }
+    #header .top-header .wrapper {
+      display: flex;
+      justify-content: space-between; }
+    #header .top-header .left {
+      color: white;
+      display: flex;
+      align-items: center;
+      font-family: "PT Sans Caption", sans-serif; }
+      #header .top-header .left i {
+        margin-right: 10px; }
+    #header .top-header .right {
+      background-color: white;
+      color: #FFCA22;
+      text-decoration: none;
+      padding: 10px 20px;
+      font-family: "PT Sans Caption", sans-serif;
+      font-weight: 600; }
 
 h1 {
   font-size: 68px; }
