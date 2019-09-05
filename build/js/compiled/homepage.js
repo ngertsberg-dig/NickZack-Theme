@@ -5,5 +5,5 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 var Homepage = function Homepage() {
   _classCallCheck(this, Homepage);
 
-  console.log('homepage');
+  console.log('new function not eval');
 };

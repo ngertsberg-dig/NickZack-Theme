@@ -2,8 +2,9 @@
 
 jQuery(document).ready(function ($) {
   //enqueues JS class depending what the page-view ID is for each page
-  var classToInit = $(".page-view").attr("id");
-  eval("new ".concat(classToInit, ";"));
+  var classToInit = $(".page-view").attr("id"); //eval(`new ${classToInit};`)
+
+  Function('new ' + classToInit)();
 });
 "use strict";
 
@@ -12,5 +13,5 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 var Homepage = function Homepage() {
   _classCallCheck(this, Homepage);
 
-  console.log('homepage');
+  console.log('new function not eval');
 };

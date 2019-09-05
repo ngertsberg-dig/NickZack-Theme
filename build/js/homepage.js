@@ -1,5 +1,5 @@
 class Homepage{
 	constructor(){
-		console.log('homepage');
+		console.log('new function not eval');
 	}
 }
