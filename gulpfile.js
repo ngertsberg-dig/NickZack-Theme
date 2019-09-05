@@ -3,6 +3,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var uglifycss = require('gulp-uglifycss');
+var babel = require('gulp-babel');
 var browserSync = require('browser-sync').create();
 sass.compiler = require('node-sass');
  gulp.task('browser-sync', function() {
@@ -37,6 +38,24 @@ gulp.task('minify', function () {
     
 });
 
+gulp.task('babel', () =>
+    gulp.src('./build/js/*.js')
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
+        .pipe(gulp.dest('./build/js/compiled/'))
+);
+gulp.task('concatBabel', () =>
+    gulp.src('./build/js/compiled/*.js')
+        .pipe(concat('main.js'))
+        .pipe(gulp.dest('./build/js/compiled/concat/'))
+);
+gulp.task('watchBabel',function(){
+    gulp.watch('./build/js/*.js', gulp.series('babel','concatBabel'));
 
-gulp.task('watchAll', gulp.parallel('browser-sync','watch'));
+})
+
+gulp.task('watchBabel', gulp.series('watchBabel'));
+
+gulp.task('watchAll', gulp.parallel('browser-sync','watch','watchBabel'));
 gulp.task('min', gulp.series('minify'));

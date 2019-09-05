@@ -27,7 +27,7 @@ NNNNNNNN         NNNNNNNZZZZZZZZZZZZZZZZZZZ
 	<meta name="author" content="">
 
 	<title>NickZack Custom Theme</title>
-
+	<link href="https://fonts.googleapis.com/css?family=Gochi+Hand|Lato|PT+Sans+Caption&display=swap" rel="stylesheet">
 	<link href = 'https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css' rel = 'stylesheet'>
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
