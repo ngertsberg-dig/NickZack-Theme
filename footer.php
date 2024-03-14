@@ -1,3 +1,6 @@
+<?php 
+	wp_footer()
+?>
 <footer>
 
 <h2> footer</h2>
